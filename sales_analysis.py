@@ -11,29 +11,27 @@ data["Date"] = pd.to_datetime(data["Date"])
 
 
 print("Sales Data Analysis Dashboard")
-print("-----------------------------")
-
 
 # Total sales
-total_sales = data["Sales"].sum()
 
+total_sales = data["Sales"].sum()
 print("Total Sales:", total_sales)
 
 
 # Best selling product
-best_product = data.groupby("Product")["Sales"].sum().idxmax()
 
+best_product = data.groupby("Product")["Sales"].sum().idxmax()
 print("Best Selling Product:", best_product)
 
 
-# Sales by category
-category_sales = data.groupby("Category")["Sales"].sum()
+# Sales category
 
+category_sales = data.groupby("Category")["Sales"].sum()
 print("\nSales by Category:")
 print(category_sales)
 
 
-# Plot category sales
+# Plot category 
 
 plt.figure(figsize=(7,5))
 
